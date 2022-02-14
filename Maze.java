@@ -77,7 +77,6 @@ public class Maze
                 done = true;
                 System.out.println("MESSAGE 2"); // you fall into the chasm of doom.
             }
-<<<<<<< HEAD
             else
             {
                 if(grid[row][col] == EMPTY)
@@ -97,26 +96,7 @@ public class Maze
                 }
                 else
                 {} // Do nothing
-=======
-            switch(grid[currentRow][currentCol])
-{
-case Maze.EMPTY:
-grid[currentRow][currentCol] = Maze.VISITED;
-break;
-case Maze.WALL:
-done = true;
-System.out.println("You stumble blindly into a solid concrete wall.");
-break;
-case Maze.END:
-done = true;
-solved = true;
-System.out.println("SOLVED!");
-break;
-default:
-// Do nothing
 
-
->>>>>>> if_replace
             }
             
             charIndex++;
