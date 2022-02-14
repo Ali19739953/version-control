@@ -77,25 +77,24 @@ public class Maze
                 done = true;
                 System.out.println("MESSAGE 2"); // you fall into the chasm of doom.
             }
-            else
-            {
-                if(grid[currentRow][currentCol] == EMPTY)
-                {
-                    grid[currentRow][currentCol] = VISITED;
-                }
-                else if(grid[currentRow][currentCol] == WALL)
-                {
-                    done = true;
-                    System.out.println("MESSAGE 3"); // You stumble blindly into a solid concrete wall.
-                }
-                else if(grid[currentRow][currentCol] == END)
-                {
-                    done = true;
-                    solved = true;
-                    System.out.println("MESSAGE 4"); // Solved.
-                }
-                else
-                {} // Do nothing
+            switch(grid[currentRow][currentCol])
+{
+case Maze.EMPTY:
+grid[currentRow][currentCol] = Maze.VISITED;
+break;
+case Maze.WALL:
+done = true;
+System.out.println("You stumble blindly into a solid concrete wall.");
+break;
+case Maze.END:
+done = true;
+solved = true;
+System.out.println("SOLVED!");
+break;
+default:
+// Do nothing
+
+
             }
             
             charIndex++;
